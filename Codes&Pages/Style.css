@@ -1,50 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    
-        background-color: lightcyan;
-        color: #333;
-      
-    
-       margin: 5px;
-       border-radius: 500px;
+
+/* Modern dark teal background */
+body {
+    background: #1c1e33; /* NEW: Darker base */
+    color: #F0F8FF; /* NEW: Brighter text */
+    margin: 5px;
+    border-radius: 500px;
+}
+.round{
+    border-radius:30px;
 }
 
-
-
-/* Navigation Bar Styles */
+/* Sleek black-to-charcoal gradient nav */
 #nav-bar {
-    background-color: black;
-    
-  
-  
+    background: #001A33; /* NEW: Darker gradient */
 }
-
 
 .navbar {
-   
     padding: 1rem 2rem;
-
-    margin: 0 auto;
-   
+    
 }
 
 .logo img {
     height: 50px;
-    
 }
 
-
-
 .nav-list {
-    
     display: flex;
     margin-left:600px;
-
 }
 
 .nav-item {
@@ -52,21 +39,20 @@ body{
 }
 
 .nav-link {
-    color: white;
+    color: #FFFFFF; /* NEW: Pure white */
     text-decoration: none;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 0.9rem;
- 
 }
 
+/* Electric blue hover */
 .nav-link:hover {
-    color: #e74c3c;
-    padding: 5px;        /* Zoom-in effect */
+    color: #00B4FF; /* NEW: Vibrant blue */
+    padding: 5px;
     margin-left: -5px;
     padding-bottom: -20px;
 }
-
 
 .menu-toggle {
     display: none;
@@ -74,9 +60,7 @@ body{
     border: none;
     color: white;
     font-size: 1.5rem;
-   
 }
-
 
 .container {
     max-width: 1200px;
@@ -84,9 +68,9 @@ body{
     padding: 2rem;
 }
 
-/* Header Styles */
+/* Deep blue header */
 header {
-    background-color: #2c3e50;
+    background-color: #1E293B; /* NEW: Rich navy */
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -95,88 +79,102 @@ header {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #30d3d369; /* NEW: Gold */
 }
 
 h2 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: #30d3d369; /* NEW: Gold */
     margin: 2rem 0 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid #FF6B6B; /* NEW: Coral accent */
 }
 
-/* About Section */
+/* Crisp white card */
 .about-section {
-    background-color: white;
+    background-color:#1E293B; /* NEW: Pure white */
     padding: 2rem;
     border-radius: 8px;
-   
     margin-bottom: 3rem;
+    color: whitesmoke; /* NEW: Dark gray text */
 }
-#image-About{
+
+#image-About {
     border-radius: 30px;
     width: 300px;
     height: auto;
     padding: 10px;
     margin-left: 0;
-    
-}
-#image-About:Hover{
-    padding: 5px;        
-    margin-left: -5px;
 }
 
-/* Muscle Groups Section */
+/* Dark slate section */
 .muscle-section {
-    background-color: white;
+    background-color: #1E293B; /* NEW: Dark slate blue */
+    color: #E2E8F0; /* NEW: Soft blue-gray text */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.muscle-group {
-    margin-bottom: 2rem;
+/* Gradient table with teal accent */
+#table-edit {
+    width: 100%;
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); /* NEW: Darker gradient */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 179, 255, 0.2); /* NEW: Blue shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem 0;
+    padding: 1.5rem;
 }
 
-.muscle-title {
-    font-size: 1.5rem;
-    color: #e74c3c;
+#table-edit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); /* NEW: Stronger blue glow */
+}
+
+#table-edit td {
+    padding: 1rem;
+}
+
+/* Vibrant teal titles */
+#table-edit .muscle-title {
+    color: #30d3d369; /* NEW: Electric teal */
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-  
-    align-items: center;
+    text-align: left;
 }
 
-.muscle-title:before {
-   
-    margin-right: 0.5rem;
-    color: #2c3e50;
-    font-weight: bold;
+#table-edit .exercise-list {
+    padding: 0;
+    text-align: left;
 }
 
-.exercise-list {
-   
-    margin-left: 1.5rem;
-}
-
-.exercise-list li {
-   
+#table-edit .exercise-list li {
+    padding: 0.5rem 0;
+    color: #E2E8F0; /* NEW: Soft blue-gray */
+    position: relative;
     padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 
-.exercise-list li:before {
-   
-    position: absolute;
-   
-    color: #3498db;
-    font-weight: bold;
+#table-edit img {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Footer */
+#table-edit:hover img {
+    transform: scale(1.05);
+}
+
+/* Dark footer with teal accent */
 footer {
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
-    background-color: #2c3e50;
-    color: white;
+    background-color: #001A33; /* NEW: Matches header */
+    color: #E2E8F0; /* NEW: Soft text */
+    border-top: 2px solid #00FFC4; /* NEW: Teal accent */
 }
