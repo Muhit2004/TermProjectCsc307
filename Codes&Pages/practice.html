@@ -3,315 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chest & Triceps - Fitness Guide</title>
+    <title>About Us - Fitness Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-       <link rel ="stylesheet" href="Style2.css">
-   
+        /* Modern dark teal background */
+        body {
+            background: #1c1e33; /* Darker base */
+            color: #F0F8FF; /* Brighter text */
+            margin: 5px;
+            border-radius: 500px;
+        }
+        .round{
+            border-radius:30px;
+        }
+
+        /* Sleek black-to-charcoal gradient nav */
+        #nav-bar {
+            background: #001A33; /* Darker gradient */
+        }
+
+        .navbar {
+            padding: 1rem 2rem;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-list {
+            display: flex;
+            margin-left:600px;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+        }
+
+        .nav-link {
+            color: #FFFFFF; /* Pure white */
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Electric blue hover */
+        .nav-link:hover {
+            color: #00B4FF; /* Vibrant blue */
+            padding: 5px;
+            margin-left: -5px;
+            padding-bottom: -20px;
+        }
+
+        .active {
+            color: #30d3d369 !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Deep blue header */
+        header {
+            background-color: #1E293B; /* Rich navy */
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #30d3d369; /* Gold */
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #30d3d369; /* Gold */
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #FF6B6B; /* Coral accent */
+        }
+
+        /* Dark slate section */
+        .muscle-section {
+            background-color: #1E293B; /* Dark slate blue */
+            color: #E2E8F0; /* Soft blue-gray text */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Gradient table with teal accent */
+        #table-edit {
+            width: 100%;
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); /* Darker gradient */
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 179, 255, 0.2); /* Blue shadow */
+           
+            margin: 1rem 0;
+            padding: 1.5rem;
+        }
+
+        #table-edit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); /* Stronger blue glow */
+        }
+
+        #table-edit td {
+            padding: 1rem;
+            
+        }
+
+        /* Vibrant teal titles */
+        #table-edit .muscle-title {
+            color: #30d3d369; /* Electric teal */
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        #table-edit .exercise-list {
+            padding: 0;
+            text-align: left;
+            list-style: none;
+        }
+
+        #table-edit .exercise-list li {
+            padding: 0.8rem 0;
+            color: #E2E8F0; /* Soft blue-gray */
+       
+            padding-left: 1.5rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+      
+
+     
+        #table-edit img {
+            max-width: 280px;
+            height: 230px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       
+        }
+
+        .img-hover {
+            width: 280px; 
+            height: 230px;
+            position: relative;
+        }
+
+
+        .exercise-description {
+            background-color: #0F172A;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            border-left: 3px solid #30d3d369;
+        }
+
+        .exercise-description p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #B0BEC5;
+        }
+
+        /* Dark footer with teal accent */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background-color: #001A33; /* Matches header */
+            color: #E2E8F0; /* Soft text */
+            border-top: 2px solid #00FFC4; /* Teal accent */
+        }
+
+        .tips-section {
+            background-color: #1E293B;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #30d3d369;
+        }
+
+        .tips-section h3 {
+            color: #30d3d369;
+            margin-bottom: 1rem;
+        }
+
+        .tips-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-section li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+           
+        }
+
+        /* About Us specific styles */
+        .about-header {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .about-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-header p {
+            font-size: 1.2rem;
+            color: #B0BEC5;
+        }
+        
+        .mission-section, .story-section, .team-section {
+            background-color: #1E293B;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-form {
+            background-color: #1E293B;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            background-color: #0F172A;
+            border: 1px solid #30d3d369;
+            border-radius: 4px;
+            color: white;
+        }
+        
+        .contact-form button {
+            background-color: #30d3d369;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .contact-form button:hover {
+            background-color: #00B4FF;
+        }
+    </style>
 </head>
 <body>
-<!-- Navigation Bar -->
-<div class="round">
-<div id="nav-bar">
-    <nav class="navbar">
-        <table>
-            <tr> 
-                <td> <a class="logo" href="Main.html"><img src="/Images/SiteLogo.png" alt="Logo"></a> </td>
-                
-                <td id="ll" colspan="2" cell-padding="10">
-                <ul class="nav-list" type="NONE">
-                    <li class="nav-item"><a class="nav-link" href="Main.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="Chest&Triceps.html">Chest & Triceps</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Back&Biceps.html">Back & Biceps</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Cardio&Abs.html">Cardio & Abs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="WorkoutPlans.Html">Workout Plans</a></li>
-                    <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li>
-                </ul>
-                </td>
-            </tr>
-        </table>
-    </nav>
-</div>
-
-    <header>
-        <div class="container">
-            <h1>Chest & Triceps Training</h1>
-            <p>Build powerful pushing muscles with targeted exercises</p>
-        </div>
-    </header>
-    
-    <div class="container">
-        <!-- Chest Exercises Section -->
-        <div class="muscle-section">
-            <h2>Chest Exercises</h2>
-          
-            <!-- Bench Press -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Bench Press</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Pectoralis Major</li>
-                                <li>Secondary: Anterior Deltoids, Triceps</li>
-                                <li>Sets: 3-4 | Reps: 6-10</li>
-                                <li>Rest: 2-3 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>The king of chest exercises. Lie flat on bench, grip bar slightly wider than shoulders, lower to chest with control, then press up explosively.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                            <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://barbend.com/wp-content/uploads/2022/03/barbell-bench-press-barbend-movement-gif-masters.gif" alt="Bench-Press">
-    <a href="https://www.youtube.com/embed/hWbUlkb5Ms4">
-      <img src="https://i.ytimg.com/vi/yDLCHaVE_ek/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA7TrA1daWCEpdgCC40y0DFv0kgWg" alt="Bench Press">
-    </a>
-  </li>
-  <li>Click here For The Tutorial</li>
-</ul>
-                        </td>
-                        
-                    </tr>
-                </table>
+    <div id="nav-bar">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Fitness Logo">
             </div>
-
-            <!-- Push-ups -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Push-Ups</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Pectoralis Major</li>
-                                <li>Secondary: Triceps, Core, Shoulders</li>
-                                <li>Sets: 3-4 | Reps: 15-25</li>
-                                <li>Rest: 1-2 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>Classic bodyweight exercise. Keep body straight, hands slightly wider than shoulders, lower chest to ground, push back up.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                            <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://i.pinimg.com/originals/fd/bb/09/fdbb092b58863e5c86fdb8bb1411fcea.gif" alt="Pushup Gif">
-    <a href="https://youtu.be/IODxDxX7oi4?si=5R8eZpkhP80wCVZ5">
-      <img src="https://www.fitfatherproject.com/wp-content/uploads/2017/04/Push-Ups.jpg" alt="Bench Press">
-    </a>
-  </li>
-   <li>Click here For The Tutorial</li>
-</ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Incline Dumbbell Press -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Incline Dumbbell Press</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Upper Pectoralis</li>
-                                <li>Secondary: Anterior Deltoids, Triceps</li>
-                                <li>Sets: 3-4 | Reps: 8-12</li>
-                                <li>Rest: 2-3 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>Target upper chest on 30-45° incline. Press dumbbells from chest level, squeezing at the top. Control the descent.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                           <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://i.pinimg.com/736x/c1/2c/c2/c12cc2c132d1dadadb8085b17a8bab77.jpg" alt="Bench-Press">
-    <a href="https://www.youtube.com/embed/hWbUlkb5Ms4">
-      <img src="https://i.pinimg.com/564x/16/83/28/168328e194c7e24280f848321e0e7913.jpg" alt="Bench Press">
-    </a>
-  </li>
-</ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Dips -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Chest Dips</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Lower Pectoralis</li>
-                                <li>Secondary: Triceps, Anterior Deltoids</li>
-                                <li>Sets: 3-4 | Reps: 8-15</li>
-                                <li>Rest: 2-3 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>Lean forward slightly, lower body until shoulders are below elbows, press back up. Great for lower chest development.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                          <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://i.pinimg.com/736x/c1/2c/c2/c12cc2c132d1dadadb8085b17a8bab77.jpg" alt="Bench-Press">
-    <a href="https://www.youtube.com/embed/hWbUlkb5Ms4">
-      <img src="https://i.pinimg.com/564x/16/83/28/168328e194c7e24280f848321e0e7913.jpg" alt="Bench Press">
-    </a>
-  </li>
-</ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- Triceps Exercises Section -->
-        <div class="muscle-section">
-            <h2>Triceps Exercises</h2>
-          
-            <!-- Close-Grip Bench Press -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Close-Grip Bench Press</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Triceps Brachii</li>
-                                <li>Secondary: Pectoralis, Anterior Deltoids</li>
-                                <li>Sets: 3-4 | Reps: 8-12</li>
-                                <li>Rest: 2-3 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>Grip bar with hands closer than shoulder-width. Keep elbows tucked, focus on triceps engagement throughout the movement.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                            <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://i.pinimg.com/736x/c1/2c/c2/c12cc2c132d1dadadb8085b17a8bab77.jpg" alt="Bench-Press">
-    <a href="https://www.youtube.com/embed/hWbUlkb5Ms4">
-      <img src="https://i.pinimg.com/564x/16/83/28/168328e194c7e24280f848321e0e7913.jpg" alt="Bench Press">
-    </a>
-  </li>
-</ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Tricep Dips -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Tricep Dips</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Triceps Brachii</li>
-                                <li>Secondary: Anterior Deltoids, Chest</li>
-                                <li>Sets: 3-4 | Reps: 10-20</li>
-                                <li>Rest: 1-2 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>Keep body upright, lower until elbows reach 90°, press back up. Can be done on parallel bars or bench.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                            <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://i.pinimg.com/736x/c1/2c/c2/c12cc2c132d1dadadb8085b17a8bab77.jpg" alt="Bench-Press">
-    <a href="https://www.youtube.com/embed/hWbUlkb5Ms4">
-      <img src="https://i.pinimg.com/564x/16/83/28/168328e194c7e24280f848321e0e7913.jpg" alt="Bench Press">
-    </a>
-  </li>
-</ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Overhead Tricep Extension -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Overhead Tricep Extension</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Triceps Brachii (Long Head)</li>
-                                <li>Secondary: Core for stability</li>
-                                <li>Sets: 3-4 | Reps: 10-15</li>
-                                <li>Rest: 2 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>Hold dumbbell overhead, lower behind head by bending elbows, extend back up. Keep elbows stationary throughout.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                            <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://i.pinimg.com/736x/c1/2c/c2/c12cc2c132d1dadadb8085b17a8bab77.jpg" alt="Bench-Press">
-    <a href="https://www.youtube.com/embed/hWbUlkb5Ms4">
-      <img src="https://i.pinimg.com/564x/16/83/28/168328e194c7e24280f848321e0e7913.jpg" alt="Bench Press">
-    </a>
-  </li>
-</ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Diamond Push-ups -->
-            <div class="muscle-group">
-                <table id="table-edit">
-                    <tr> 
-                        <td style="width: 60%;">
-                            <h3 class="muscle-title">Diamond Push-ups</h3>
-                            <ul class="exercise-list">
-                                <li>Primary muscle: Triceps Brachii</li>
-                                <li>Secondary: Inner Chest, Core</li>
-                                <li>Sets: 3-4 | Reps: 8-15</li>
-                                <li>Rest: 1-2 minutes between sets</li>
-                            </ul>
-                            <div class="exercise-description">
-                                <p>Form diamond shape with hands, keep elbows close to body, lower chest to hands, push back up. Advanced bodyweight exercise.</p>
-                            </div>
-                        </td>
-                        <td class="img-hover">
-                           <ul style="list-style: none;">
-  <li>
-    <img class="default-img" src="https://i.pinimg.com/736x/c1/2c/c2/c12cc2c132d1dadadb8085b17a8bab77.jpg" alt="Bench-Press">
-    <a href="https://www.youtube.com/embed/hWbUlkb5Ms4">
-      <img src="https://i.pinimg.com/564x/16/83/28/168328e194c7e24280f848321e0e7913.jpg" alt="Bench Press">
-    </a>
-  </li>
-</ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- Training Tips Section -->
-        <div class="tips-section">
-            <h3>Training Tips for Chest & Triceps</h3>
-            <ul>
-                <li>Always warm up with light cardio and dynamic stretching</li>
-                <li>Focus on proper form over heavy weight</li>
-                <li>Control the negative (lowering) portion of each rep</li>
-                <li>Allow 48-72 hours rest between chest/tricep sessions</li>
-                <li>Progress gradually by adding weight or reps weekly</li>
-                <li>Include both compound and isolation exercises</li>
-                <li>Stay hydrated and fuel your muscles with proper nutrition</li>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Museio Ghoo part 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Museio Group part 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Cashlo</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Workout Plans</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">About Us</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
-    
+
+    <div class="container">
+        <header class="about-header">
+            <h1>EMPOWERING YOUR FITNESS JOURNEY</h1>
+            <p>Science-backed training since 2023</p>
+        </header>
+
+        <section class="mission-section">
+            <h2>OUR MISSION</h2>
+            <p>We are dedicated to inspiring and guiding individuals on their fitness journey through scientifically-proven training methods and personalized workout plans. Our mission is to make fitness accessible, enjoyable, and effective for everyone, regardless of their starting point.</p>
+        </section>
+
+        <section class="story-section">
+            <h2>Our Story</h2>
+            <p>Founded in 2023, our platform was born from a shared passion for fitness and a desire to create a comprehensive resource for people looking to improve their health. What started as a small group of fitness enthusiasts has grown into a thriving community of like-minded individuals supporting each other's goals.</p>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <p>Our team consists of certified fitness trainers, nutritionists, and software developers who have come together to create this unique platform. We combine our expertise to deliver the most effective, science-backed training programs available online.</p>
+        </section>
+
+        <section class="contact-form">
+            <h2>CONTACT US</h2>
+            <p>Fill in the Form</p>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Your Email">
+                <input type="tel" placeholder="Your Telephone Number">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
     <footer>
-        <p>&copy; 2023 Fitness Training Guide. All rights reserved.</p>
+        <p>@2023 | Museio Ministry</p>
     </footer>
-</div>
- 
 </body>
 </html>
