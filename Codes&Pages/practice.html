@@ -3,331 +3,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Fitness Journey</title>
+    <title>Muscle Mastery - Empowering Your Fitness Journey</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
         }
 
-        /* Modern dark teal background */
         body {
-            background: #1c1e33; /* Darker base */
-            color: #F0F8FF; /* Brighter text */
-            margin: 5px;
-            border-radius: 500px;
-        }
-        .round{
-            border-radius:30px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%);
+            color: white;
+            min-height: 100vh;
         }
 
-        /* Sleek black-to-charcoal gradient nav */
-        #nav-bar {
-            background: #001A33; /* Darker gradient */
+        /* Navigation */
+        div {
+            padding: 20px 0;
+            text-align: center;
         }
 
-        .navbar {
-            padding: 1rem 2rem;
+        div ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 40px;
+        }
+
+        div ul li {
+            display: inline;
+        }
+
+        div ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        div ul li a:hover,
+        div ul li a.active {
+            border-bottom: 2px solid white;
+        }
+
+        /* Logo and Header */
+        .logo {
+            text-align: center;
+            margin: 40px 0;
         }
 
         .logo img {
-            height: 50px;
+            width: 80px;
+            height: 80px;
         }
 
-        .nav-list {
-            display: flex;
-            margin-left:600px;
-        }
-
-        .nav-item {
-            margin-left: 2rem;
-        }
-
-        .nav-link {
-            color: #FFFFFF; /* Pure white */
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        /* Electric blue hover */
-        .nav-link:hover {
-            color: #00B4FF; /* Vibrant blue */
-            padding: 5px;
-            margin-left: -5px;
-            padding-bottom: -20px;
-        }
-
-        .active {
-            color: #30d3d369 !important;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
+        .logo-text {
             color: white;
-            font-size: 1.5rem;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Deep blue header */
-        header {
-            background-color: #1E293B; /* Rich navy */
-            color: white;
-            padding: 3rem 0;
+        /* Hero Section */
+        .hero {
             text-align: center;
+            padding: 60px 20px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #30d3d369; /* Gold */
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
 
-        h2 {
-            font-size: 2rem;
-            color: #30d3d369; /* Gold */
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #FF6B6B; /* Coral accent */
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
 
-        /* Dark slate section */
-        .muscle-section {
-            background-color: #1E293B; /* Dark slate blue */
-            color: #E2E8F0; /* Soft blue-gray text */
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        /* Gradient table with teal accent */
-        #table-edit {
-            width: 100%;
-            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); /* Darker gradient */
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 179, 255, 0.2); /* Blue shadow */
-           
-            margin: 1rem 0;
-            padding: 1.5rem;
-        }
-
-        #table-edit:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); /* Stronger blue glow */
-        }
-
-        #table-edit td {
-            padding: 1rem;
-            
-        }
-
-        /* Vibrant teal titles */
-        #table-edit .muscle-title {
-            color: #30d3d369; /* Electric teal */
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-
-        #table-edit .exercise-list {
-            padding: 0;
-            text-align: left;
-            list-style: none;
-        }
-
-        #table-edit .exercise-list li {
-            padding: 0.8rem 0;
-            color: #E2E8F0; /* Soft blue-gray */
-       
-            padding-left: 1.5rem;
-            font-size: 1.1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-      
-
-     
-        #table-edit img {
-            max-width: 280px;
-            height: 230px;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-       
-        }
-
-        .img-hover {
-            width: 280px; 
-            height: 230px;
+        /* Landscape Image */
+        .landscape-img {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 60px;
+            background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 60%, #90EE90 60%, #228B22 100%);
+            border-radius: 10px;
             position: relative;
         }
 
-
-        .exercise-description {
-            background-color: #0F172A;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 0.5rem;
-            border-left: 3px solid #30d3d369;
+        .landscape-img::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            width: 60px;
+            height: 40px;
+            background: white;
+            border-radius: 50px;
+            opacity: 0.8;
         }
 
-        .exercise-description p {
-            font-size: 0.9rem;
+        .landscape-img::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: 80px;
+            width: 40px;
+            height: 25px;
+            background: white;
+            border-radius: 30px;
+            opacity: 0.6;
+        }
+
+        /* Mission Section */
+        .mission {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .mission h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .mission-content {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 30px;
+            margin: 0 auto;
+            max-width: 600px;
+            border-radius: 10px;
+            font-size: 16px;
             line-height: 1.6;
-            color: #B0BEC5;
         }
 
-        /* Dark footer with teal accent */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            background-color: #001A33; /* Matches header */
-            color: #E2E8F0; /* Soft text */
-            border-top: 2px solid #00FFC4; /* Teal accent */
-        }
-
-        .tips-section {
-            background-color: #1E293B;
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            border-left: 4px solid #30d3d369;
-        }
-
-        .tips-section h3 {
-            color: #30d3d369;
-            margin-bottom: 1rem;
-        }
-
-        .tips-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .tips-section li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-           
-        }
-
-        /* About Us specific styles */
-        .about-header {
-            text-align: center;
-            padding: 3rem 0;
-        }
-        
-        .about-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .about-header p {
-            font-size: 1.2rem;
-            color: #B0BEC5;
-        }
-        
-        .mission-section, .story-section, .team-section {
-            background-color: #1E293B;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-form {
-            background-color: #1E293B;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-        
-        .contact-form input, .contact-form textarea {
+        /* Two Column Section */
+        .two-column {
+            display: table;
             width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            background-color: #0F172A;
-            border: 1px solid #30d3d369;
-            border-radius: 4px;
-            color: white;
+            margin-top: 60px;
         }
-        
-        .contact-form button {
-            background-color: #30d3d369;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            cursor: pointer;
+
+        .column {
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+            padding: 40px;
+        }
+
+        .column.left {
+            background: rgba(0, 0, 0, 0.3);
+            border-right: 2px solid #444;
+        }
+
+        .column.right {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .column h3 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Team Member Cards */
+        .team-member {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .team-img {
+            width: 120px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 60%, #90EE90 60%, #228B22 100%);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .team-img::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            width: 25px;
+            height: 15px;
+            background: white;
+            border-radius: 20px;
+            opacity: 0.8;
+        }
+
+        .team-name {
+            font-size: 18px;
             font-weight: bold;
         }
-        
-        .contact-form button:hover {
-            background-color: #00B4FF;
+
+        /* Story Section */
+        .story-content {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .contact h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: white;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #666;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .two-column {
+                display: block;
+            }
+            
+            .column {
+                display: block;
+                width: 100%;
+            }
+            
+            .column.left {
+                border-right: none;
+                border-bottom: 2px solid #444;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="nav-bar">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="logo.png" alt="Fitness Logo">
+    <!-- Navigation -->
+    <div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Muscle Group part 1</a></li>
+            <li><a href="#">Muscle Group part 1</a></li>
+            <li><a href="#">Cardio</a></li>
+            <li><a href="#">Workout Plans</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+
+
+   
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>EMPOWERING YOUR FITNESS JOURNEY</h1>
+        <p>Science-backed training since 2023</p>
+        
+        <!-- Landscape Image -->
+        <div class="landscape-img"></div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission">
+        <h2>OUR MISSION</h2>
+        <div class="mission-content">
+            A paragraph about about how we want to inspire with this website.
+        </div>
+    </div>
+
+    <!-- Two Column Section: Meet the Team & Our Story -->
+    <div class="two-column">
+        <!-- Left Column: Meet the Team -->
+        <div class="column left">
+            <h3>Meet the Team</h3>
+            
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <div class="team-img"></div>
+                <div class="team-name">Name</div>
             </div>
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Museio Ghoo part 1</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Museio Group part 1</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Cashlo</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Workout Plans</a></li>
-                <li class="nav-item"><a href="#" class="nav-link active">About Us</a></li>
-            </ul>
-        </nav>
+            
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <div class="team-img"></div>
+                <div class="team-name">Name</div>
+            </div>
+        </div>
+        
+        <!-- Right Column: Our Story -->
+        <div class="column right">
+            <h3>Our Story</h3>
+            <div class="story-content">
+                A paragraph about how we came up with the idea.
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <header class="about-header">
-            <h1>EMPOWERING YOUR FITNESS JOURNEY</h1>
-            <p>Science-backed training since 2023</p>
-        </header>
-
-        <section class="mission-section">
-            <h2>OUR MISSION</h2>
-            <p>We are dedicated to inspiring and guiding individuals on their fitness journey through scientifically-proven training methods and personalized workout plans. Our mission is to make fitness accessible, enjoyable, and effective for everyone, regardless of their starting point.</p>
-        </section>
-
-        <section class="story-section">
-            <h2>Our Story</h2>
-            <p>Founded in 2023, our platform was born from a shared passion for fitness and a desire to create a comprehensive resource for people looking to improve their health. What started as a small group of fitness enthusiasts has grown into a thriving community of like-minded individuals supporting each other's goals.</p>
-        </section>
-
-        <section class="team-section">
-            <h2>Meet the Team</h2>
-            <p>Our team consists of certified fitness trainers, nutritionists, and software developers who have come together to create this unique platform. We combine our expertise to deliver the most effective, science-backed training programs available online.</p>
-        </section>
-
-        <section class="contact-form">
-            <h2>CONTACT US</h2>
-            <p>Fill in the Form</p>
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Your Email">
-                <input type="tel" placeholder="Your Telephone Number">
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+    <!-- Contact Section -->
+    <div class="contact">
+        <h2>CONTACT US</h2>
+        <h3>Fill in the Form</h3>
+        
+        <!-- Contact Form -->
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Your name*" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" placeholder="Your Email*" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" placeholder="Your Telephone Number*" required>
+            </div>
+            
+            <div class="form-group">
+                <textarea placeholder="Your Enquiry*" required></textarea>
+            </div>
+        </form>
     </div>
 
-    <footer>
-        <p>@2023 | Museio Ministry</p>
+    <!-- Footer -->
+    <footer class="footer">
+        ©2023 | Muscle Mastery
     </footer>
 </body>
 </html>

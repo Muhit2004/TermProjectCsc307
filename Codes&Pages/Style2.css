@@ -1,0 +1,218 @@
+ * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Modern dark teal background */
+        body {
+            background:linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%  );
+            color: #F0F8FF; /* Brighter text */
+            margin: 5px;
+            border-radius: 500px;
+        }
+        .round{
+            border-radius:30px;
+        }
+
+        /* Sleek black-to-charcoal gradient nav */
+        #nav-bar {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%  );
+        }
+
+        .navbar {
+            padding: 1rem 2rem;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-list {
+            display: flex;
+            margin-left:600px;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+        }
+
+        .nav-link {
+            color: #FFFFFF; /* Pure white */
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Electric blue hover */
+        .nav-link:hover {
+            color: #00B4FF; /* Vibrant blue */
+            padding: 5px;
+            margin-left: -5px;
+            padding-bottom: -20px;
+        }
+
+        .active {
+            color: #30d3d369 !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Deep blue header */
+        header {
+            background-color: #1E293B; /* Rich navy */
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #30d3d369; /* Gold */
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #30d3d369; /* Gold */
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #FF6B6B; /* Coral accent */
+        }
+
+        /* Dark slate section */
+        .muscle-section {
+            background-color: #1E293B; /* Dark slate blue */
+            color: #E2E8F0; /* Soft blue-gray text */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Gradient table with teal accent */
+        #table-edit {
+            width: 100%;
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); /* Darker gradient */
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 179, 255, 0.2); /* Blue shadow */
+           
+            margin: 1rem 0;
+            padding: 1.5rem;
+        }
+
+        #table-edit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); /* Stronger blue glow */
+        }
+
+        #table-edit td {
+            padding: 1rem;
+            
+        }
+
+        /* Vibrant teal titles */
+        #table-edit .muscle-title {
+            color: #30d3d369; /* Electric teal */
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        #table-edit .exercise-list {
+            padding: 0;
+            text-align: left;
+            list-style: none;
+        }
+
+        #table-edit .exercise-list li {
+            padding: 0.8rem 0;
+            color: #E2E8F0; /* Soft blue-gray */
+       
+            padding-left: 1.5rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+      
+
+     
+        #table-edit img {
+            max-width: 280px;
+            height: 230px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       
+        }
+
+        .img-hover {
+            width: 280px; 
+            height: 230px;
+            position: relative;
+        }
+
+
+        .exercise-description {
+            background-color: #0F172A;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            border-left: 3px solid #30d3d369;
+        }
+
+        .exercise-description p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #B0BEC5;
+        }
+
+        /* Dark footer with teal accent */
+       
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%  );
+    color: #E2E8F0; 
+    border-top: 2px solid #00FFC4; 
+}
+
+        .tips-section {
+            background-color: #1E293B;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #30d3d369;
+        }
+
+        .tips-section h3 {
+            color: #30d3d369;
+            margin-bottom: 1rem;
+        }
+
+        .tips-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-section li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+           
+        }
+
+      

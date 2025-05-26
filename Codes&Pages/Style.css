@@ -4,24 +4,25 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Modern dark teal background */
+
 body {
-    background: #1c1e33; /* NEW: Darker base */
-    color: #F0F8FF; /* NEW: Brighter text */
-    margin: 5px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%); /* NEW: Darker base */
+    color: #F0F8FF;
+    
     border-radius: 500px;
 }
 .round{
     border-radius:30px;
 }
 
-/* Sleek black-to-charcoal gradient nav */
+
 #nav-bar {
-    background: #001A33; /* NEW: Darker gradient */
+    background: 5px; 
 }
 
 .navbar {
     padding: 1rem 2rem;
+     float:left;
     
 }
 
@@ -30,25 +31,26 @@ body {
 }
 
 .nav-list {
-    display: flex;
-    margin-left:600px;
+  
+    margin-left:700px;
 }
 
 .nav-item {
     margin-left: 2rem;
+    float:left;
 }
 
 .nav-link {
-    color: #FFFFFF; /* NEW: Pure white */
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 0.9rem;
 }
 
-/* Electric blue hover */
+
 .nav-link:hover {
-    color: #00B4FF; /* NEW: Vibrant blue */
+    color: #00B4FF; 
     padding: 5px;
     margin-left: -5px;
     padding-bottom: -20px;
@@ -68,9 +70,9 @@ body {
     padding: 2rem;
 }
 
-/* Deep blue header */
+
 header {
-    background-color: #1E293B; /* NEW: Rich navy */
+    background-color: #1E293B; 
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -79,24 +81,24 @@ header {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #30d3d369; /* NEW: Gold */
+    color: #30d3d369;
 }
 
 h2 {
     font-size: 2rem;
-    color: #30d3d369; /* NEW: Gold */
+    color: #30d3d369;
     margin: 2rem 0 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #FF6B6B; /* NEW: Coral accent */
+    border-bottom: 2px solid #FF6B6B;
 }
 
-/* Crisp white card */
+
 .about-section {
-    background-color:#1E293B; /* NEW: Pure white */
+    background-color:#1E293B;
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 3rem;
-    color: whitesmoke; /* NEW: Dark gray text */
+    color: whitesmoke; 
 }
 
 #image-About {
@@ -106,40 +108,46 @@ h2 {
     padding: 10px;
     margin-left: 0;
 }
+#image-About1{
+ border-radius: 30px;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    margin-left: 0;
+}
 
-/* Dark slate section */
+
 .muscle-section {
-    background-color: #1E293B; /* NEW: Dark slate blue */
-    color: #E2E8F0; /* NEW: Soft blue-gray text */
+    background-color: #1E293B; 
+    color: #E2E8F0;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Gradient table with teal accent */
+
 #table-edit {
     width: 100%;
-    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); /* NEW: Darker gradient */
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 179, 255, 0.2); /* NEW: Blue shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 179, 255, 0.2);
     margin: 1rem 0;
     padding: 1.5rem;
 }
 
 #table-edit:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); /* NEW: Stronger blue glow */
+    box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); 
 }
 
 #table-edit td {
     padding: 1rem;
 }
 
-/* Vibrant teal titles */
+
 #table-edit .muscle-title {
-    color: #30d3d369; /* NEW: Electric teal */
+    color: #30d3d369;
     font-size: 1.8rem;
     margin-bottom: 1rem;
     text-align: left;
@@ -152,7 +160,7 @@ h2 {
 
 #table-edit .exercise-list li {
     padding: 0.5rem 0;
-    color: #E2E8F0; /* NEW: Soft blue-gray */
+    color: #E2E8F0; 
     position: relative;
     padding-left: 1.5rem;
     font-size: 1.1rem;
@@ -160,21 +168,29 @@ h2 {
 
 #table-edit img {
     max-width: 200px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
 }
 
-#table-edit:hover img {
-    transform: scale(1.05);
+#image-About:hover {
+    height:230px;
+    transform: rotate(3deg);
+}
+.img-hover{
+     width: 200px; 
+    height: 200px;
 }
 
-/* Dark footer with teal accent */
+
+
+
+
+
 footer {
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
-    background-color: #001A33; /* NEW: Matches header */
-    color: #E2E8F0; /* NEW: Soft text */
-    border-top: 2px solid #00FFC4; /* NEW: Teal accent */
+   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100% , );
+    color: #E2E8F0; 
+    border-top: 2px solid #00FFC4; 
 }
