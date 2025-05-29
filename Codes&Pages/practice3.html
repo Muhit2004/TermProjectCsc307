@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Level Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .calculator-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-option input {
+            width: auto;
+            margin-right: 5px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .strength-level {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stars {
+            color: #f39c12;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .comparison {
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Strength Level Calculator</h1>
+    
+    <div class="calculator-container">
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male">Male</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age (years)</label>
+            <input type="number" id="age" min="15" max="100" value="30">
+        </div>
+        
+        <div class="form-group">
+            <label for="bodyweight">Bodyweight (lbs)</label>
+            <input type="number" id="bodyweight" min="50" max="500" value="180">
+        </div>
+        
+        <div class="form-group">
+            <label for="exercise">Exercise</label>
+            <select id="exercise">
+                <option value="bench">Bench Press</option>
+                <option value="squat">Squat</option>
+                <option value="deadlift">Deadlift</option>
+                <option value="overhead">Overhead Press</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="weight">Weight Lifted (lbs)</label>
+            <input type="number" id="weight" min="1" max="2000" value="135">
+        </div>
+        
+        <div class="form-group">
+            <label for="reps">Repetitions</label>
+            <input type="number" id="reps" min="1" max="20" value="1">
+        </div>
+        
+        <button id="calculate-btn">Calculate Strength</button>
+        
+        <div id="results" class="results">
+            <div class="strength-level">Your Strength Level: <span id="level-text"></span></div>
+            <div class="stars" id="stars"></div>
+            <div>One-Rep Max: <span id="orm"></span> lbs</div>
+            <div>Relative Strength: <span id="relative-strength"></span></div>
+            <div class="comparison">You are stronger than <span id="percentile"></span>% of <span id="comparison-group"></span> lifters.</div>
+        </div>
+    </div>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Color Toggle</title>
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #toggle-btn {
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="page-body">
+    <button id="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+    
+    <h1>My Website</h1>
+    <p id="content">This text will change color with the theme.</p>
+
+    <script>
+        let isDark = false;
+        
+        function toggleTheme() {
+            const body = document.getElementById("page-body");
+            const content = document.getElementById("content");
+            const btn = document.getElementById("toggle-btn");
+            
+            if (isDark) {
+                // Light mode
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                content.style.color = "black";
+                btn.textContent = "Toggle Dark Mode";
+                isDark = false;
+            } else {
+                // Dark mode
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                content.style.color = "white";
+                btn.textContent = "Toggle Light Mode";
+                isDark = true;
+            }
+        }
+    </script>
+</body>
+</html>
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', calculateStrength);
+        
+        function calculateStrength() {
+            // Get input values
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const age = parseInt(document.getElementById('age').value);
+            const bodyweight = parseFloat(document.getElementById('bodyweight').value);
+            const exercise = document.getElementById('exercise').value;
+            const weight = parseFloat(document.getElementById('weight').value);
+            const reps = parseInt(document.getElementById('reps').value);
+            
+            // Calculate one-rep max (using Epley formula)
+            const oneRepMax = reps === 1 ? weight : weight * (1 + reps / 30);
+            
+            // Calculate relative strength
+            const relativeStrength = oneRepMax / bodyweight;
+            
+            // Determine strength level based on relative strength
+            var level, stars, percentile;
+            
+            // These thresholds are simplified examples - you'd want more precise data
+            if (gender === 'male') {
+                if (relativeStrength < 0.8) {
+                    level = "Beginner";
+                    stars = "★";
+                    percentile = 10;
+                } else if (relativeStrength < 1.2) {
+                    level = "Novice";
+                    stars = "★★";
+                    percentile = 30;
+                } else if (relativeStrength < 1.6) {
+                    level = "Intermediate";
+                    stars = "★★★";
+                    percentile = 60;
+                } else if (relativeStrength < 2.0) {
+                    level = "Advanced";
+                    stars = "★★★★";
+                    percentile = 85;
+                } else {
+                    level = "Elite";
+                    stars = "★★★★★";
+                    percentile = 95;
+                }
+            } else { // female
+                if (relativeStrength < 0.6) {
+                    level = "Beginner";
+                    stars = "★";
+                    percentile = 10;
+                } else if (relativeStrength < 1.0) {
+                    level = "Novice";
+                    stars = "★★";
+                    percentile = 30;
+                } else if (relativeStrength < 1.4) {
+                    level = "Intermediate";
+                    stars = "★★★";
+                    percentile = 60;
+                } else if (relativeStrength < 1.8) {
+                    level = "Advanced";
+                    stars = "★★★★";
+                    percentile = 85;
+                } else {
+                    level = "Elite";
+                    stars = "★★★★★";
+                    percentile = 95;
+                }
+            }
+            
+            // Adjust percentile slightly based on age (simple example)
+            if (age > 40) percentile += 5;
+            if (age > 50) percentile += 5;
+            if (age < 25) percentile -= 5;
+            percentile = Math.min(99, Math.max(1, percentile));
+            
+            // Display results
+            document.getElementById('level-text').textContent = level;
+            document.getElementById('stars').textContent = stars;
+            document.getElementById('orm').textContent = oneRepMax.toFixed(1);
+            document.getElementById('relative-strength').textContent = relativeStrength.toFixed(2);
+            document.getElementById('percentile').textContent = percentile;
+            
+            // Create comparison group text
+            var exerciseName = "Bench Press";
+            if (exercise === "squat") exerciseName = "Squat";
+            else if (exercise === "deadlift") exerciseName = "Deadlift";
+            else if (exercise === "overhead") exerciseName = "Overhead Press";
+            
+            const comparisonGroup = `${gender} ${bodyweight}lb ${exerciseName}`;
+            document.getElementById('comparison-group').textContent = comparisonGroup;
+            
+            // Show results
+            document.getElementById('results').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

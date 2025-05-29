@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strength Level Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+        input, select {
+            padding: 5px;
+            width: 150px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+        .stars {
+            color: gold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Strength Level Calculator</h1>
+    <p>Join our community and calculate your relative strength!</p>
+    
+    <div class="input-group">
+        <label>Gender:</label>
+        <input type="radio" name="gender" id="male" value="male" checked> Male
+        <input type="radio" name="gender" id="female" value="female"> Female
+    </div>
+    
+    <div class="input-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="15" max="100"> years old
+    </div>
+    
+    <div class="input-group">
+        <label for="bodyweight">Bodyweight:</label>
+        <input type="number" id="bodyweight" min="50" max="500"> lb
+    </div>
+    
+    <div class="input-group">
+        <label for="exercise">Exercise:</label>
+        <select id="exercise">
+            <option value="bench">Bench Press</option>
+            <option value="squat">Squat</option>
+            <option value="deadlift">Deadlift</option>
+        </select>
+    </div>
+    
+    <div class="input-group">
+        <label for="weight">Weight Lifted:</label>
+        <input type="number" id="weight" min="20" max="2000"> lb
+    </div>
+    
+    <div class="input-group">
+        <label for="reps">Repetitions:</label>
+        <input type="number" id="reps" min="1" max="20" value="1">
+    </div>
+    
+    <button onclick="calculateStrength()">Calculate Strength</button>
+    
+    <div id="results">
+        <h2>Your Strength Level: <span id="level-text"></span></h2>
+        <div class="stars" id="stars"></div>
+        <p>One-Rep Max: <span id="orm"></span> lb</p>
+        <p>Relative Strength: <span id="relative-strength"></span></p>
+        <p>You are stronger than <span id="percentile"></span>% of <span id="comparison-group"></span> lifters.</p>
+    </div>
+
+    <script>
+        function calculateStrength() {
+            // Get input values
+            var gender = document.getElementById('male').checked ? 'male' : 'female';
+            var age = parseInt(document.getElementById('age').value);
+            var bodyweight = parseFloat(document.getElementById('bodyweight').value);
+            var exercise = document.getElementById('exercise').value;
+            var weight = parseFloat(document.getElementById('weight').value);
+            var reps = parseInt(document.getElementById('reps').value);
+            
+            // Calculate one-rep max
+            var oneRepMax;
+            if (reps === 1) {
+                oneRepMax = weight;
+            } else {
+                oneRepMax = weight * (1 + reps / 30); // Epley formula
+            }
+            
+            // Calculate relative strength
+            var relativeStrength = oneRepMax / bodyweight;
+            
+            // Determine strength level
+            var level, stars, percentile;
+            
+            if (gender === 'male') {
+                if (relativeStrength < 0.8) {
+                    level = "Beginner";
+                    stars = "★";
+                    percentile = 10;
+                } else if (relativeStrength < 1.2) {
+                    level = "Novice";
+                    stars = "★★";
+                    percentile = 30;
+                } else if (relativeStrength < 1.6) {
+                    level = "Intermediate";
+                    stars = "★★★";
+                    percentile = 60;
+                } else if (relativeStrength < 2.0) {
+                    level = "Advanced";
+                    stars = "★★★★";
+                    percentile = 85;
+                } else {
+                    level = "Elite";
+                    stars = "★★★★★";
+                    percentile = 95;
+                }
+            } else {
+                if (relativeStrength < 0.6) {
+                    level = "Beginner";
+                    stars = "★";
+                    percentile = 10;
+                } else if (relativeStrength < 1.0) {
+                    level = "Novice";
+                    stars = "★★";
+                    percentile = 30;
+                } else if (relativeStrength < 1.4) {
+                    level = "Intermediate";
+                    stars = "★★★";
+                    percentile = 60;
+                } else if (relativeStrength < 1.8) {
+                    level = "Advanced";
+                    stars = "★★★★";
+                    percentile = 85;
+                } else {
+                    level = "Elite";
+                    stars = "★★★★★";
+                    percentile = 95;
+                }
+            }
+            
+            // Age adjustment
+            if (age > 40) percentile += 5;
+            if (age > 50) percentile += 5;
+            if (age < 25) percentile -= 5;
+            if (percentile > 99) percentile = 99;
+            if (percentile < 1) percentile = 1;
+            
+            // Get exercise name
+            var exerciseName;
+            if (exercise === "bench") {
+                exerciseName = "Bench Press";
+            } else if (exercise === "squat") {
+                exerciseName = "Squat";
+            } else {
+                exerciseName = "Deadlift";
+            }
+            
+            // Display results
+            document.getElementById('level-text').innerHTML = level;
+            document.getElementById('stars').innerHTML = stars;
+            document.getElementById('orm').innerHTML = oneRepMax.toFixed(1);
+            document.getElementById('relative-strength').innerHTML = relativeStrength.toFixed(2);
+            document.getElementById('percentile').innerHTML = percentile;
+            document.getElementById('comparison-group').innerHTML = gender + " " + bodyweight + "lb " + exerciseName;
+            
+            document.getElementById('results').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -4,35 +4,54 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/*body section*/
 body {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%); /* NEW: Darker base */
+  
     color: #F0F8FF;
-    
+    background-image: url(gym.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 500px;
 }
 .round{
     border-radius:30px;
 }
 
-
+/*nav section*/
 #nav-bar {
-    background: 5px; 
+      background:transparent;
+       
 }
+
 
 .navbar {
     padding: 1rem 2rem;
-     float:left;
-    
+    background:transparent;
+  
+}
+#logo-img{
+ border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   
+     transition: all 0.3s ease;
+}
+#logo-img:hover{
+ transform:  translateY(-5px);
+     box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); 
 }
 
 .logo img {
     height: 50px;
+   
 }
 
+
 .nav-list {
+
   
-    margin-left:700px;
+    margin-left:600px;
 }
 
 .nav-item {
@@ -43,29 +62,34 @@ body {
 .nav-link {
     color: #FFFFFF;
     text-decoration: none;
-    font-weight: 500;
+    font-family:monospace;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
 }
-
 
 .nav-link:hover {
-    color: #00B4FF; 
-    padding: 5px;
-    margin-left: -5px;
-    padding-bottom: -20px;
+    color: #00B4FF;
+    transform: translateX(-3px);
+    border-color: #00B4FF; 
+}
+#main1{
+    color: #00B4FF;
+    text-decoration: none;
+
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid  #00B4FF;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-}
 
+/*header- section*/
 .container {
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -92,7 +116,7 @@ h2 {
     border-bottom: 2px solid #FF6B6B;
 }
 
-
+/*about*section*/
 .about-section {
     background-color:#1E293B;
     padding: 2rem;
@@ -101,13 +125,7 @@ h2 {
     color: whitesmoke; 
 }
 
-#image-About {
-    border-radius: 30px;
-    width: 300px;
-    height: auto;
-    padding: 10px;
-    margin-left: 0;
-}
+
 #image-About1{
  border-radius: 30px;
     width: 300px;
@@ -116,13 +134,27 @@ h2 {
     margin-left: 0;
 }
 
-
+/*muscle-section*/
 .muscle-section {
     background-color: #1E293B; 
     color: #E2E8F0;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.muscle-links{
+    text-decoration: none;
+    
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    color:#30d3d369;
+}
+.muscle-links:hover {
+   color: #0f4860;
+    transform: translateY(-3px);
+    border-color: #00B4FF; 
 }
 
 
@@ -134,6 +166,7 @@ h2 {
     box-shadow: 0 4px 15px rgba(0, 179, 255, 0.2);
     margin: 1rem 0;
     padding: 1.5rem;
+     transition: all 0.3s ease;
 }
 
 #table-edit:hover {
@@ -167,14 +200,21 @@ h2 {
 }
 
 #table-edit img {
-    max-width: 200px;
+   background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 5px 15px rgba(0, 179, 255, 0.3);
+        transition: all 0.3s ease;
+        width: 280px;
+}
+.default-img{
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #image-About:hover {
     height:230px;
-    transform: rotate(3deg);
+    transform:  scale(1.05);
+     box-shadow: 0 8px 25px rgba(0, 179, 255, 0.4); 
 }
 .img-hover{
      width: 200px; 
@@ -185,12 +225,12 @@ h2 {
 
 
 
-
+/*footer*/
 footer {
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
-   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100% , );
+   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100% );
     color: #E2E8F0; 
     border-top: 2px solid #00FFC4; 
 }
